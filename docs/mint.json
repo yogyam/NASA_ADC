@@ -1,0 +1,50 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "NASA_ADC",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+  },
+  "topbarLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/yogyam/NASA_ADC"
+    }
+  ],
+  "assistant": {
+    "enabled": true,
+    "triggers": [
+      "question",
+      "help",
+      "how",
+      "what",
+      "why"
+    ],
+    "suggestions": [
+      "How do I get started with NASA_ADC?",
+      "What are the main API endpoints?",
+      "How do I deploy this application?"
+    ]
+  },
+  "search": {
+    "prompt": "Ask me anything about NASA_ADC"
+  },
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/yogyam/NASA_ADC"
+  }
+}
