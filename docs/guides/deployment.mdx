@@ -1,0 +1,86 @@
+---
+title: "Deployment Guide"
+description: "Deploy and manage NASA_ADC in production"
+icon: "rocket"
+---
+
+# Deployment Guide
+
+Learn how to deploy NASA_ADC to production environments.
+
+## Prerequisites
+
+<CardGroup cols={2}>
+  <Card title="Server Requirements" icon="server">
+    Python 3.7+
+  </Card>
+  <Card title="Database" icon="database">
+    Database as needed
+  </Card>
+</CardGroup>
+
+## Environment Variables
+
+Create a production `.env` file:
+
+```bash
+# Application
+NODE_ENV=production
+PORT=3000
+
+# Database
+DATABASE_URL=your_database_url
+
+# Authentication
+JWT_SECRET=your_jwt_secret
+
+# External Services
+# Add your service configurations
+```
+
+## Deployment Methods
+
+### Docker Deployment
+
+```dockerfile
+FROM python:3.9-slim
+
+WORKDIR /app
+COPY . .
+
+RUN pip install -r requirements.txt
+EXPOSE 8000
+CMD ["python", "main.py"]
+```
+
+### Traditional Server
+
+```bash
+# Clone repository
+git clone https://github.com/yogyam/NASA_ADC.git
+cd NASA_ADC
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start application
+python main.py
+```
+
+## Monitoring
+
+### Health Checks
+Monitor the application health:
+
+```bash
+curl http://your-domain.com/health
+```
+
+### Performance Metrics
+- Response time: < 200ms (95th percentile)
+- Uptime: 99.9%
+- Error rate: < 0.1%
+
+<Warning>
+  Always test your deployment in a staging environment before going live.
+</Warning>
