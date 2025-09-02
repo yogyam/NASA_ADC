@@ -1,0 +1,75 @@
+---
+title: "Developer Guide"
+description: "Technical documentation for developers working with NASA_ADC"
+icon: "code"
+---
+
+# Developer Guide
+
+Complete technical guide for developers working on NASA_ADC.
+
+## Development Environment
+
+### Local Setup
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/yogyam/NASA_ADC.git
+   cd NASA_ADC
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Environment Configuration**
+   ```bash
+   cp .env.example .env
+   # Configure your environment variables
+   ```
+
+## Architecture Overview
+
+### Technology Stack
+- **Primary Language**: Python
+- **Framework**: Not detected
+- **API Endpoints**: 0
+- **Functions**: 59
+
+
+
+## Development Workflow
+
+### Code Structure
+```
+NASA_ADC/
+├── ├── src/             # Source code
+├── docs/            # Documentation  
+├── tests/           # Test files
+└── README.md        # Project overview
+```
+
+### Testing
+```bash
+pytest
+```
+
+### Building
+```bash
+python setup.py build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Make your changes
+4. Add tests for new functionality
+5. Commit changes: `git commit -m 'Add amazing feature'`
+6. Push to branch: `git push origin feature/amazing-feature`
+7. Open a Pull Request
+
+<Tip>
+  Always run tests before submitting a Pull Request: `pytest`
+</Tip>
